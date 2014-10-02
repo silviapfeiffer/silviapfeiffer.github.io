@@ -2,8 +2,135 @@
 <html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head>
     <title>Converting SRT files to WebVTT files</title>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <style>
+    table {
+      width: 80%;
+      background-color: rgb(241,241,241);
+      border: gray 1px solid;
+      border-collapse: collapse;
+    }
+    table thead {
+      background-color: rgb(80,144,240);
+    }
+    table td, table th {
+      border: gray 1px solid;
+      padding: 7px;
+    }
+    table body tr {
+      background: #b8d1f3;
+    }
+    table tbody tr:hover {
+      background-color: rgb(174,211,248);
+    }
+    </style>
   </head>
   <body>
+    <h1>WebVTT support in browsers</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Chrome/Opera</th>
+          <th>Firefox</th>
+          <th>Internet Explorer</th>
+          <th>Safari</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Required Header</td>
+          <td>WEBVTT</td>
+          <td>WEBVTT</td>
+          <td>WEBVTT FILE</td>
+          <td>WEBVTT</td>
+        </tr>
+        <tr>
+          <td>File MIME Type</td>
+          <td>sniffing</td>
+          <td>sniffing</td>
+          <td>'text/vtt'</td>
+          <td>sniffing</td>
+        </tr>
+        <tr>
+          <td>Menu in video controls to select tracks</td>
+          <td>CC button</td>
+          <td></td>
+          <td>&#10004;</td>
+          <td>&#10004;</td>
+        </tr>
+        <tr>
+          <td>JavaScript TextTrack API</td>
+          <td>&#10004;</td>
+          <td>&#10004;</td>
+          <td>&#10004;</td>
+          <td>&#10004;</td>
+        </tr>
+        <tr>
+          <td>Rendering of text-only captions & subtitles</td>
+          <td>&#10004;</td>
+          <td>&#10004;</td>
+          <td>&#10004;</td>
+          <td>&#10004;</td>
+        </tr>
+        <tr>
+          <td>Cue styling with ::cue and ::cue()</td>
+          <td>&#10004;</td>
+          <td></td>
+          <td></td>
+          <td>&#10004;</td>
+        </tr>
+        <tr>
+          <td>Cue markup incl. Timestamps</td>
+          <td>&#10004;</td>
+          <td>&#10004;</td>
+          <td></td>
+          <td>&#10004;</td>
+        </tr>
+        <tr>
+          <td>Vertical Cue setting</td>
+          <td>&#10004; (buggy)</td>
+          <td></td>
+          <td></td>
+          <td>&#10004;</td>
+        </tr>
+        <tr>
+          <td>Line, Align, Position, Size Cue settings</td>
+          <td>&#10004;</td>
+          <td>&#10004;</td>
+          <td></td>
+          <td>&#10004;</td>
+        </tr>
+        <tr>
+          <td>Comments (NOTE)</td>
+          <td>&#10004;</td>
+          <td>&#10004;</td>
+          <td></td>
+          <td>&#10004;</td>
+        </tr>
+        <tr>
+          <td>Regions</td>
+          <td>Behind Flag</td>
+          <td></td>
+          <td></td>
+          <td>Behind Flag</td>
+        </tr>
+        <tr>
+          <td>Rendering of text descriptions</td>
+          <td>With extension</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Rendering of chapters</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
     <h1>Converting SRT files to WebVTT files</h1>
     <h4>Cut and paste SRT file into text entry box:</h4>
     <textarea cols="80" id="srt" name="content" rows="20"></textarea>
