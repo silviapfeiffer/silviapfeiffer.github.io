@@ -171,6 +171,10 @@
           
           var cue = "";
           var s = caption.split(/\n/);
+          while (s.length > 3) {
+            s[2] += '\n' + s.pop();
+          }
+
           var line = 0;
           
           // detect identifier
@@ -204,5 +208,7 @@
           return cue;
         }
     </script>
+    <p>Source code at <a href="https://github.com/silviapfeiffer/silviapfeiffer.github.io">Github</a>.</p>
+    <p>Thanks to David Desmeurs for his contribution.</p>
   </body>
 </html>
